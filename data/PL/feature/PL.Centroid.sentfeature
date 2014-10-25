@@ -1,0 +1,84 @@
+<?xml version='1.0'?>
+<SENT-FEATURE>
+	<S DID="41" SNO="1" >
+		<FEATURE N="Centroid" V="0.120563907797920" />
+	</S>
+	<S DID="41" SNO="2" >
+		<FEATURE N="Centroid" V="1.000000000000000" />
+	</S>
+	<S DID="41" SNO="3" >
+		<FEATURE N="Centroid" V="0.737719982085682" />
+	</S>
+	<S DID="41" SNO="4" >
+		<FEATURE N="Centroid" V="0.465015600495552" />
+	</S>
+	<S DID="41" SNO="5" >
+		<FEATURE N="Centroid" V="0.305980690508344" />
+	</S>
+	<S DID="41" SNO="6" >
+		<FEATURE N="Centroid" V="0.489150183206407" />
+	</S>
+	<S DID="41" SNO="7" >
+		<FEATURE N="Centroid" V="0.038241831214765" />
+	</S>
+	<S DID="41" SNO="8" >
+		<FEATURE N="Centroid" V="0.064126955207467" />
+	</S>
+	<S DID="41" SNO="9" >
+		<FEATURE N="Centroid" V="0.159462879808280" />
+	</S>
+	<S DID="41" SNO="10" >
+		<FEATURE N="Centroid" V="0.181048756511721" />
+	</S>
+	<S DID="41" SNO="11" >
+		<FEATURE N="Centroid" V="0.857504700515393" />
+	</S>
+	<S DID="41" SNO="12" >
+		<FEATURE N="Centroid" V="0.349990241788884" />
+	</S>
+	<S DID="41" SNO="13" >
+		<FEATURE N="Centroid" V="0.397282445246534" />
+	</S>
+	<S DID="41" SNO="14" >
+		<FEATURE N="Centroid" V="0.329152060536107" />
+	</S>
+	<S DID="41" SNO="15" >
+		<FEATURE N="Centroid" V="0.550341622674361" />
+	</S>
+	<S DID="41" SNO="16" >
+		<FEATURE N="Centroid" V="0.766983145832236" />
+	</S>
+	<S DID="41" SNO="17" >
+		<FEATURE N="Centroid" V="0.080058221942456" />
+	</S>
+	<S DID="41" SNO="18" >
+		<FEATURE N="Centroid" V="0.038011779780293" />
+	</S>
+	<S DID="41" SNO="19" >
+		<FEATURE N="Centroid" V="0.334616037447128" />
+	</S>
+	<S DID="41" SNO="20" >
+		<FEATURE N="Centroid" V="0.207974703661703" />
+	</S>
+	<S DID="41" SNO="21" >
+		<FEATURE N="Centroid" V="0.303796924188996" />
+	</S>
+	<S DID="41" SNO="22" >
+		<FEATURE N="Centroid" V="0.613493015838951" />
+	</S>
+	<S DID="41" SNO="23" >
+		<FEATURE N="Centroid" V="0.604110055991508" />
+	</S>
+	<S DID="41" SNO="24" >
+		<FEATURE N="Centroid" V="0.130726959649276" />
+	</S>
+	<S DID="41" SNO="25" >
+		<FEATURE N="Centroid" V="0.711126228344500" />
+	</S>
+	<S DID="41" SNO="26" >
+		<FEATURE N="Centroid" V="0.899619621655120" />
+	</S>
+	<S DID="41" SNO="27" >
+		<FEATURE N="Centroid" V="0.075430441822173" />
+	</S>
+</SENT-FEATURE>
