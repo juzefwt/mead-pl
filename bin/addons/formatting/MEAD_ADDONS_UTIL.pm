@@ -1,5 +1,7 @@
 package MEAD_ADDONS_UTIL;
 
+use utf8;
+
 use HTML::Parser;
 
 require Exporter;
@@ -15,7 +17,7 @@ require Exporter;
 	     sanitize
 );
 
-my $DTD_DIR ="/clair7/projects/mead309/mead/dtd";
+my $DTD_DIR ="/home/juzef/PWR/MGR/mead/dtd/";
 
 
 

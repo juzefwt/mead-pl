@@ -1,11 +1,14 @@
 package MEAD::Document;
 
+use utf8;
+
 require Exporter;
 @ISA = qw(Exporter);
 @EXPORT = qw(DID_to_docsent_filename
 	     read_document);
 
 use strict;
+use Data::Dumper;
 
 use XML::Parser;
 use Text::Iconv;
@@ -39,8 +42,9 @@ sub read_document {
 	Start => \&read_document_handle_start,
 	Char => \&read_document_handle_char});
 
-    open (INSTREAM, "iconv -f BIG5 -t UTF-8 $document_filename |");
+    open (INSTREAM, "<:encoding(utf8)", $document_filename);
     $xml_parser->parse(\*INSTREAM);
+
     return $read_document_sentences;
 
 }
@@ -75,10 +79,8 @@ sub read_document_handle_char {
     my $text = shift;
 
     if ($text =~ /\S/) {
-	$text = $UTF_8_to_Big5->convert($text);
 	$$read_document_sentence{'TEXT'} .= $text;
-	$$read_document_sentences[$$read_document_sentence{'SNO'}] = 
-	    $read_document_sentence;
+	$$read_document_sentences[$$read_document_sentence{'SNO'}] = $read_document_sentence;
     }
 }
 

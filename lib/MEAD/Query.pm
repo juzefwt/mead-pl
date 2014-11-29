@@ -23,7 +23,7 @@ sub read_query {
 	Start => \&read_query_handle_start,
 	Char => \&read_query_handle_char});
 
-    open(UNICODE_VERSION, "iconv -f BIG5 -t UTF-8 $query_filename |");
+    open(UNICODE_VERSION, "<:utf8 ", "$query_filename");
     $xml_parser->parse(\*UNICODE_VERSION);
     close(UNICODE_VERSION);
     
@@ -47,8 +47,7 @@ sub read_query_handle_char {
     my $text = shift;
 
     if ($text =~ /\S/) {
-	$$read_query_result{$current_element_name} .=
-	    $UTF_8_to_Big5->convert($text);
+	$$read_query_result{$current_element_name} .= $text;
     }
 }
 

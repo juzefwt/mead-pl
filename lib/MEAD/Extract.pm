@@ -11,6 +11,7 @@ require Exporter;
 	     sentref_array_to_extract);
 
 use strict;
+use utf8;
 
 use XML::TreeBuilder;
 use XML::Parser;

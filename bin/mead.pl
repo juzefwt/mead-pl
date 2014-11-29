@@ -15,6 +15,7 @@
 #   ./mead.pl -help
 #
 
+use utf8;
 use strict;
 
 use File::Spec;

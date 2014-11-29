@@ -1,5 +1,7 @@
 #!/usr/local/bin/perl 
 
+use utf8;
+
 use MEAD_ADDONS_UTIL qw (split_sentences get_docsent_header get_docsent_tail  
             get_cluster_header get_cluster_tail sanitize); 
 

@@ -1,13 +1,14 @@
 #!/usr/local/bin/perl -w
 #use NDBM_File;
+use diagnostics;
 package Essence::IDF;
 require Exporter;
 
 @ISA = qw(Exporter);
 @EXPORT = qw(open_nidf
              get_nidf);
-
 use strict;
+use utf8;
 
 use File::Spec;
 
@@ -56,15 +57,15 @@ use DB_File;
 sub get_nidf {
 
     my $word = shift;
-
+return 1;
     unless (defined $current_dbmname) {
         open_nidf($DEFAULT_DBMNAME);
     }
 
+
     if (defined $nidf{$word}) {
         return $nidf{$word};
     }
-
     return $DEFAULT_UNKNOWN_IDF;
 }
 

@@ -11,7 +11,7 @@ require Exporter;
 	     Debug write_summary);
 
 use strict;
-
+use utf8;
 use vars '$VERSION';
 
 use vars '$MEADDIR';
@@ -28,7 +28,7 @@ $VERSION = "3.07";
 
 # NOTE: this is the ONLY place where the path to MEAD should be hardcoded.
 
-$MEADDIR = "/home/juzef/mead";
+$MEADDIR = "/home/juzef/PWR/MGR/mead";
 
 # I don't know what we're going to use these for.
 $DEBUG = 0;

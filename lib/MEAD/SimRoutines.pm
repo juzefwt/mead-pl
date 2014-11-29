@@ -6,6 +6,8 @@ our (@EXPORT, @ISA);
 @EXPORT = qw( GetLexSim cosine uniq %sim_routines $lang );
 use Essence::IDF;
 
+# use utf8;
+
 use vars '%sim_routines';
 use vars '$lang';
 
