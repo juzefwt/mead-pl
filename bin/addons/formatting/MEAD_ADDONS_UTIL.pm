@@ -17,7 +17,7 @@ require Exporter;
 	     sanitize
 );
 
-my $DTD_DIR ="/home/juzef/PWR/MGR/mead/dtd/";
+my $DTD_DIR ="/usr/local/share/mead/dtd/";
 
 
 

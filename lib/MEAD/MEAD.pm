@@ -28,7 +28,7 @@ $VERSION = "3.07";
 
 # NOTE: this is the ONLY place where the path to MEAD should be hardcoded.
 
-$MEADDIR = "/home/juzef/PWR/MGR/mead";
+$MEADDIR = "/usr/local/share/mead";
 
 # I don't know what we're going to use these for.
 $DEBUG = 0;
