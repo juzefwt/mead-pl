@@ -41,7 +41,7 @@ use DB_File;
     #    die "Cannot open DBM $dbmname";
     #}
 
-    unless (tie(%nidf,"DB_File", $dbmname, O_RDWR|O_CREAT, 0644)) {
+    unless (tie(%nidf,"DB_File", $dbmname, O_RDONLY, 0644)) {
         die "Cannot open DBM $dbmname";
     }
     
