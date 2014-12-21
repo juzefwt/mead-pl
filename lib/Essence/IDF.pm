@@ -20,7 +20,7 @@ use vars qw($current_dbmname
             $IDFDIR
             %nidf);
 
-$DEFAULT_DBMNAME = "enidf";
+$DEFAULT_DBMNAME = "plidf";
 
 # if the word is not in the dbm, return this value.
 $DEFAULT_UNKNOWN_IDF = 0.1;
@@ -57,7 +57,8 @@ use DB_File;
 sub get_nidf {
 
     my $word = shift;
-return 1;
+    $word = utf8::decode($word);
+
     unless (defined $current_dbmname) {
         open_nidf($DEFAULT_DBMNAME);
     }

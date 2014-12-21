@@ -3,7 +3,7 @@
 use Essence::IDF;
 
 
-my $eng_idf_word = "enidf";
+my $eng_idf_word = "plidf";
 #my $eng_idf_lemma = "cnidf";
 
 sub my_simple_cosine {
