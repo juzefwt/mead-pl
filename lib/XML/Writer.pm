@@ -13,7 +13,7 @@ require 5.004;
 use strict;
 use vars qw($VERSION);
 use Carp;
-use IO;
+use IO::File;
 
 $VERSION = "0.4";
 
@@ -201,6 +201,7 @@ sub new {
   };
 
   my $startTag = sub {
+    my $dataIndent = 0;
     my $name = $_[0];
     if ($dataMode) {
       $output->print("\n");
@@ -242,6 +243,7 @@ sub new {
 
   my $emptyTag = sub {
     my $name = $_[0];
+    my $dataIndent = 0;
     if ($dataMode) {
       $output->print("\n");
       $output->print(" " x ($elementLevel * $dataIndent));
@@ -276,6 +278,7 @@ sub new {
 
   my $endTag = sub {
     my $name = $_[0];
+    my $dataIndent = 0;
     my $currentName = pop @elementStack;
     $name = $currentName unless $name;
     $elementLevel--;

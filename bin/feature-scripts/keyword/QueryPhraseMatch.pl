@@ -25,7 +25,7 @@ use MEAD::Evaluation;
 use Essence::IDF;
 use Essence::Text;
 
-use Lingua::Stem;
+# use Lingua::Stem;
 
 # get the option
 my $q;
@@ -61,9 +61,10 @@ my $query_description = $$query{'DESCRIPTION'};
 my $query_keywords = $$query{'KEYWORDS'};
 
 my $ENG_IDF = "enidf";
+my $POL_IDF = "plidf";
 my $CHIN_IDF = "cnidf";
 
-extract_sentfeatures($datadir, {'Cluster' => \&cluster, 
+extract_sentfeatures("$datadir", {'Cluster' => \&cluster, 
 				'Document' => \&document,
 				'Sentence' => \&sentence});
 
@@ -73,6 +74,8 @@ sub cluster {
     # open the appropriate IDF file based on language...
     if ($$cluster{'LANG'} && $$cluster{'LANG'} eq "CHIN") {
 	open_nidf($CHIN_IDF);
+    } elsif ($$cluster{'LANG'} && $$cluster{'LANG'} eq "POL") {
+        open_nidf($POL_IDF);
     } else {
 	open_nidf($ENG_IDF);
     }
@@ -93,16 +96,16 @@ sub document {
 	}
 	else {next; }
 	chomp $text;
-	my @words = split (/\s+/,$text);
-	my $stemmer = Lingua::Stem->new(-locale => 'EN-US');
-	$stemmer->stem_caching({ -level => 2 });
+# 	my @words = split (/\s+/,$text);
+# 	my $stemmer = Lingua::Stem->new(-locale => 'EN-US');
+# 	$stemmer->stem_caching({ -level => 2 });
         # Stem the sentence
-	my @stemmed_words = $stemmer->stem(@words);
-	my $stemmed_sentence = '';
-	foreach my $word (@words) {
-		$stemmed_sentence .= "$word ";
-	}
-	$allsents{$did}{$sentno} = "$stemmed_sentence";
+# 	my @stemmed_words = $stemmer->stem(@words);
+# 	my $stemmed_sentence = '';
+# 	foreach my $word (@words) {
+# 		$stemmed_sentence .= "$word ";
+# 	}
+	$allsents{$did}{$sentno} = $text;
     }
 }
 
