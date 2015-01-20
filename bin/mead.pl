@@ -56,11 +56,11 @@ my $LEADBASED_CLASSIFIER =
     "$BINDIR/leadbased-classifier.pl Length 9";
 
 my $DEFAULT_RERANKER = 
-    "$BINDIR/default-reranker.pl MEAD-cosine .7 enidf";
+    "$BINDIR/default-reranker.pl MEAD-cosine .7 plidf";
 my $IDENTITY_RERANKER =
     "$BINDIR/identity-reranker.pl";
 
-my $DEFAULT_CENTROID = "$SCRIPTSDIR/Centroid.pl enidf ENG";
+my $DEFAULT_CENTROID = "$SCRIPTSDIR/Centroid.pl plidf POL";
 my $DEFAULT_LENGTH = "$SCRIPTSDIR/Length.pl";
 my $DEFAULT_POSITION = "$SCRIPTSDIR/Position.pl";
 
@@ -519,7 +519,7 @@ sub resolve_options {
     
     # TODO: this is a hack.
     #       get the language from each cluster.
-    resolve_option(\$lang, "lang", "ENG");
+    resolve_option(\$lang, "lang", "POL");
 
     # 
     # The user can provide docsent_dir and feature_dir 
