@@ -1,8 +1,9 @@
 #!/usr/bin/perl
 
 use strict;
+use utf8;
 
-my $ROUGE_HOME = "/data2/tools/ROUGEeval-JK-1.2";
+my $ROUGE_HOME = "/usr/local/share/mead/rouge/playground";
 
 my $systemFile = shift;
 my @models = @ARGV;
@@ -77,8 +78,8 @@ print CONFIG "</MODELS>
 
 close CONFIG;
 
-print `$ROUGE_HOME/runROUGE.sh`;
-
+# to be run from evaluate.php
+#system("$ROUGE_HOME/runROUGE.sh");
 
 sub open_file{
 my $file = shift;
